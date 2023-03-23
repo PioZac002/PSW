@@ -1,5 +1,6 @@
 import com.sun.source.tree.WhileLoopTree;
-
+import java.util.HashSet;
+import java.util.Set;
 import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.util.*;
@@ -7,8 +8,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        zadanie1();
-
+        //zadanie1();
+        zadanie2();
     }
 
 
@@ -30,14 +31,18 @@ public class Main {
     }
 
     public static void zadanie2(){
-        List uniqueValues = new ArrayList<>(); // w arrayLiscie moga istniec duplikaty takze moze byc kilku Mariuszy etc.
+                Scanner scanner = new Scanner(System.in);
+                Set<Integer> unikatoweLiczby = new HashSet<Integer>();
+                int liczba;
 
-        Scanner scanner=new Scanner(System.in);
-        while (true){
+                System.out.println("Podaj liczby całkowite (wpisz 'stop' aby zakończyć):");
 
-        }
-        =scanner.nextLine();
+                while (scanner.hasNextInt()) {
+                    liczba = scanner.nextInt();
+                    unikatoweLiczby.add(liczba);
+                }
 
-//        System.out.println(name);
+                System.out.println("Liczba unikatowych wartości: " + unikatoweLiczby.size());
+            }
+
     }
-}
