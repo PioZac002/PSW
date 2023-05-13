@@ -7,42 +7,18 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+//
+//        Zadanie1 zadanie1 =new Zadanie1();
+//        zadanie1.Start();
+//        Zadanie2 zadanie2= new Zadanie2();
+//        zadanie2.Start();
+//        Zadanie3 zadanie3=new Zadanie3();
+//        zadanie3.Start();
+//        Zadanie4 zadanie4=new Zadanie4();
+//        zadanie4.Start();
+        Zadanie5 zadanie5=new Zadanie5();
+        zadanie5.Start();
 
-        //zadanie1();
-        zadanie2();
     }
-
-
-    public static void zadanie1() {
-
-        Random random = new Random();
-        int number = random.nextInt(100 + 1);
-        Scanner scanner = new Scanner(System.in);
-        boolean wasNumberGuessed = false;
-
-        while (!wasNumberGuessed) {
-            System.out.println("Zgadnij liczbe z przedzialu 0-100");
-            int UserNumber = scanner.nextInt();
-            if (UserNumber < number) System.out.println("Liczba jest za mala");
-            else if (UserNumber > number) System.out.println("Zbyt duza liczba");
-            else {System.out.println("Brawo! Zgadles liczbe");  wasNumberGuessed = true;}
-
-        }
-    }
-
-    public static void zadanie2(){
-                Scanner scanner = new Scanner(System.in);
-                Set<Integer> unikatoweLiczby = new HashSet<Integer>();
-                int liczba;
-
-                System.out.println("Podaj liczby całkowite (wpisz 'stop' aby zakończyć):");
-
-                while (scanner.hasNextInt()) {
-                    liczba = scanner.nextInt();
-                    unikatoweLiczby.add(liczba);
-                }
-
-                System.out.println("Liczba unikatowych wartości: " + unikatoweLiczby.size());
-            }
 
     }
